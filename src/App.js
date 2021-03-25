@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
     function testHandler(e) {
         e.preventDefault();
         let token = document.location.href.split("=")[1];
@@ -58,6 +59,7 @@ function App() {
                 </a>
                 <a href="https://www.yammer.com/dialog/oauth?client_id=HTZElxy9dNKzHUVsRALFCw&redirect_uri=https://localhost:3000/&response_type=token">Yammer Login</a>
                 <a href="#" onClick={testHandler}>Yammer Test</a>
+
                 <a href="https://login.microsoftonline.com/8a5ee357-7de0-4836-ab20-9173b12cdce9/oauth2/v2.0/authorize?client_id=e2b23b83-4856-4029-9284-54b08a285564&response_type=code&redirect_uri=https://localhost:3000&scope=openid&response_mode=fragment&state=12345&nonce=678910">AAD Login</a>
                 <a href="#" onClick={aadTestHandler}>AAD Access Token</a>
                 <a href="#" onClick={aadCallYammerHandler1}>AAD Call Yammer API</a>
